@@ -1,0 +1,35 @@
+#include <iostream>
+#include <algorithm>
+#include <string.h>
+#include <string>
+using namespace std;
+string x,y;  int z = 0;
+
+void prem(string str) {
+	int s = 0; int j = 0;
+	if (j < str.size()) {
+
+		for (int x = str.size() - 1; x > 1; x--) {
+			swap(str[x], str[x - 1]);
+			if (str == y)break;
+			cout << str << endl;
+		}
+	}
+	if (str == y) {
+		swap(y[0], y[z + 1]);
+		z++;
+		j++;
+		str = y;
+		if (z == str.size())return;
+		cout << str << endl;
+	}
+
+	return prem(str);
+}
+
+int main()
+{
+	cin >> x;
+	y = x;
+	prem(x);
+}
